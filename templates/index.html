@@ -1,21 +1,22 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en">
 <head>
 	<title>@ank</title>
 	<meta charset="utf-8">
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-	</script>
-	<script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
-	</script>
+<link rel="stylesheet" href="{%static 'css/about.css'%}">
+<link rel="stylesheet" href="{%static 'css/nav.css'%}">
+<link rel="stylesheet" href="{%static 'css/contact.css'%}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:black;" >
 		<div role="navigation">
 			<div class="container">
 				<div class="navbar-header">
@@ -27,40 +28,52 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="{%url 'home'%}" class="navbar-brand">ANK</a>
+					<a href="{%url 'home'%}" class="navbar-brand" style="font-weight:bold;" >ANK</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="{%url 'home'%}">Home</a></li>
-						<li><a href="{%url 'about'%}">About</a> </li>
-						<li><a href="{%url 'contact'%}">Contact</a> </li>
-						<li><a href="{%url 'services'%}">Services</a> </li>
-						<li><a href="{%url 'products'%}">Products</a> </li>
+						<li><a href="{%url 'home'%}" style="font-weight:bold;font-size: large;">Home</a></li>
+						<li><a href="{%url 'about'%}" style="font-weight:bold;font-size: large;">About</a> </li>
+						<li><a href="{%url 'contact'%}" style="font-weight:bold;font-size: large;">Contact</a> </li>
+						<li><a href="{%url 'services'%}" style="font-weight:bold;font-size: large;">Services</a> </li>
+						<li><a href="{%url 'products'%}" style="font-weight:bold;font-size: large;">Products</a> </li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</nav>
 
-<div class="container" style="margin-top: 50px;" >
-    <div class="row">
-        <div class="col-sm-4" style="background-color:gray;">
-            <p style="text-align: center;">hi i am shunham</p>
-        </div>
-   
-        <div class="col-sm-4" style="background-color:gray;">
-            <p style="text-align: center;">hi i am shubham</p>
-        </div>
 
-        <div class="col-sm-4" style="background-color:gray;">
-            <p style="text-align: center;">hi i am shubham</p>
-        </div>
-
-    </div>
-</div>
 
 	{%block content%}
+	
 	{%endblock%}
+	<script>
+		var tablinks = document.getElementsByClassName("tab-links");
+		var tabcontents = document.getElementsByClassName("tab-contents");
+		function opentab(tabname) {
+			for (tablink of tablinks) {
+				tablink.classList.remove("active-link");
+			}
+			for (tabcontent of tabcontents) {
+				tabcontent.classList.remove("active-tab");
+			}
+			event.currentTarget.classList.add("active-link");
+			document.getElementById(tabname).classList.add("active-tab");
+		}
+	</script>
+	
+	<script>
+
+		var sidemenu = document.getElementById("sidemenu");
+
+		function openmenu() {
+			sidemenu.style.right = "0";
+		}
+		function closemenu() {
+			sidemenu.style.right = "-200px";
+		}
+	</script>
 </body>
 </html>
 

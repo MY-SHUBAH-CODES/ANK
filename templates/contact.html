@@ -1,20 +1,36 @@
 {% extends 'index.html' %}
 {%block content%}
-<div class="container" style="margin-top: 50px;" >
-    <div class="row">
-        <div class="col-sm-4" style="background-color:gray;">
-            <p style="text-align: center;">hi i am shunham</p>
-        </div>
-   
-        <div class="col-sm-4" style="background-color:gray;">
-            <p style="text-align: center;">hi i am shubham</p>
-        </div>
+ <div class="contact" style="margin-top: 50px" >
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>Shubhi231305@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>8924929744</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    {% comment %} <a href="{{url}}" attributes-list download="{%static 'doc/Shubham.pdf'%}" class="btn btn2"> Download CV</a> {% endcomment %}
 
-        <div class="col-sm-4" style="background-color:gray;">
-            <p style="text-align: center;">hi i am shubham</p>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
-
+        <div class="copy-right">
+            <p>Copyright @ Shubham singh. Design & Developed by:- shubham singh </p>
+        </div>
     </div>
-</div>
-<p> Contact page</p>
+
+
+
 {%endblock%}
