@@ -4,11 +4,11 @@ from app1 import views
 
 urlpatterns = [
     path('',views.home,name="home"),
-    path('about/',views.about,name="about"),
-    path('contact/',views.contact,name="contact"),
-    path('services/',views.services,name="services"),
-    path('products/',views.products,name="products"),
-    path('general_contact/',views.general_contact,name="general_contact"),
+    # path('about/',views.about,name="about"),
+    # path('contact/',views.contact,name="contact"),
+    # path('services/',views.services,name="services"),
+    # path('products/',views.products,name="products"),
+    # path('general_contact/',views.general_contact,name="general_contact"),
 
 
 
