@@ -1,580 +1,1003 @@
 <!DOCTYPE html>
-<html>
-
+{%load static%}
+<html lang="en">
 <head>
-    <title>Html Website 2020</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--/*font awesome icons*/-->
-    {%load static%}
-    <link type="text/css" rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Fashion Website Design Tutorial</title>
 
-    <!--rubik font family -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Rubik:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-    <!--custom css-->
-    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css'%}" />
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!--media css-->
-    <link type="text/css" rel="stylesheet" href="{% static 'css/media.css'%}" />
-
-    <!--jquery ui files-->
-    <link type="text/css" rel="stylesheet" href="{% static 'css/jquery-ui.structure.min.css'%}" />
-    <link type="text/css" rel="stylesheet" href="{% static 'css/jquery-ui.theme.min.css'%}" />
-
-    <!--owl carousel-->
-    <link type="text/css" rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}" />
-    <link type="text/css" rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}" />
-
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
 
 </head>
-
 <body>
+    
+<!-- header section starts  -->
 
-    <div id="arrow">
-        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-shopping-cart"></i>ANK</a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#products">products</a>
+        <a href="#featured">featured</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="#blogs">blogs</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        {% comment %} <a href="#" class="fas fa-shopping-cart"></a> {% endcomment %}
+        {% comment %} <a href="#" class="fas fa-heart"></a> {% endcomment %}
     </div>
 
-    <header id="home">
-        <div class="container">
-            <div class="top-bar">
-                <div class="nav-col">
-                    <div class="logo">
-                        <img src="{% static 'images/logo.png'%}" class="img-responsive" alt="logo" />
-                    </div>
-                    <!--logo-->
-                    <div class="menu">
-                        <a class="active" href="#home">Home</a>
-                        <a href="#why-choose-us">About US</a>
-                        <a href="#expand">Services</a>
-                        <a href="#project">Project</a>
-                        <a href="#blog">Blog</a>
-                        <a href="#contact">Contact Us</a>
-                    </div>
-                    <div class="clear"></div>
-                    <!--clear-->
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="swiper home-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide" style="background:url({%static 'image/banner1.jpg'%}) no-repeat">
+                <div class="content">
+                    <span>master of handcraft</span>
+                    <h3>OUR WEAVERS</h3>
+                    <a href="#" class="btn">Contact Us</a>
                 </div>
-                <!--nav-col-->
-                <div class="cnt-info-col">
-                    <a href="tel:7652000000"><span>Call US:</span>7652000000</a>
+            </div>
+
+            <div class="swiper-slide slide" style="background:url({%static 'image/banner2.jpg'%}) no-repeat">
+                <div class="content">
+                    <span>master of handcraft</span>
+                    <h3>OUR WEAVERS</h3>
+                    <a href="#" class="btn">Contact Us</a>
                 </div>
-                <div class="clear"></div>
-                <!--clear-->
             </div>
-            <!--top-bar-->
+
+            <div class="swiper-slide slide" style="background:url({%static 'image/banner3.jpg'%}) no-repeat">
+                <div class="content">
+                    <span>master of handcraft</span>
+                    <h3>OUR WEAVERS</h3>
+                    <a href="#" class="btn">Contact Us</a>
+                </div>
+            </div>
+
         </div>
-    </header>
 
-    <section id="mobile-menu">
-        <div class="container-mobile">
-            <div class="mobile-logo">
-                <img src="{% static 'images/logo.png'%}" class="img-responsive" alt="logo" />
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
 
-                <div class="clear"></div>
-                <!--clear-->
-            </div>
-            <!--nav-col-->
-            <div class="cnt-info-col">
-                <button type="button" id="toggle-bar"><i class="fa fa-bars"></i></button>
-            </div>
-            <div class="clear"></div>
-            <!--clear-->
-        </div>
-    </section>
-
-    <div class="menu">
-        <a class="active" href="#home">Home</a>
-        <a href="#why-choose-us">About US</a>
-        <a href="#expand">Services</a>
-        <a href="#project">Project</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact Us</a>
-        <a href="tel:7652000000">7652000000</a>
     </div>
 
-    <section class="header-bg-parent">
-        <div class="header-col1">
-            <h5>WELCOME</h5>
-            <h2>Digital Products</h2>
-            <h2 class="typewrite" data-period="1000" data-type='[ "for Business", "to sell online", "for your ideas"]'></h2>
-            <p>Ensuring the best return on investment for your
-                bespoke SEO campaign requirement.</p>
-            <button class="common-btn" type="button">CONTACT TODAY</button>
+</section>
+
+<!-- home section ends -->
+
+<!-- banner section starts  -->
+
+<section class="banner-container">
+
+    <div class="banner">
+        <img src="{%static 'image/shop_banner_img1.jpg'%}" alt="">
+        <div class="content">
+            <span>special offer</span>
+            <h3>upto 50% off</h3>
+            <a href="#" class="btn">shop now</a>
         </div>
-        <!--header-col1-->
-        <div class="header-col2">
+    </div>
+    
+    <div class="banner">
+        <img src="{%static 'image/shop_banner_img2.jpg'%}" alt="">
+        <div class="content">
+            <span>special offer</span>
+            <h3>upto 50% off</h3>
+            <a href="#" class="btn">shop now</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- banner section ends -->
+
+<!-- products section starts  -->
+
+<section class="products" id="products">
+
+    <h1 class="heading"> exclusive <span>products</span> </h1>
+
+    <div class="filter-buttons">
+        <div class="buttons active" data-filter="all">all</div>
+        <div class="buttons" data-filter="arrivals">new arrivals</div>
+        <div class="buttons" data-filter="featured">featured</div>
+        <div class="buttons" data-filter="special">special offer</div>
+        <div class="buttons" data-filter="seller">best seller</div>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box" data-item="featured">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img1.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="special">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img2.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="seller">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img1.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="arrivals">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img4.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="featured">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img5.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="arrivals">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img6.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="special">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img7.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="seller">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img8.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="seller">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img9.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="featured">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img10.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="special">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img11.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="seller">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="{%static 'image/product_img12.jpg'%}" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- products section ends -->
+
+<!-- deal section starts  -->
+
+<section class="deal">
+
+    <div class="image">
+        <img src="{%static 'image/tranding_img.png'%}" alt="">
+    </div>
+
+    <div class="content">
+        <span>new season trending!</span>
+        <h3>best summer collection</h3>
+        <p>sale get up to 50% off</p>
+        <a href="#" class="btn">shop now</a>
+    </div>
+
+</section>
+
+<!-- deal section ends -->
+
+<!-- featured section starts  -->
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>featured</span> products </h1>
+
+    <div class="swiper featured-slider">
+        
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{%static 'image/product_img1.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>product name</h3>
+                    <div class="price">
+                        <div class="amount">$20.00</div>
+                        <div class="cut">$25.00</div>
+                        <div class="offer">20% off</div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{%static 'image/product_img2.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>product name</h3>
+                    <div class="price">
+                        <div class="amount">$20.00</div>
+                        <div class="cut">$25.00</div>
+                        <div class="offer">20% off</div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{%static 'image/product_img3.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>product name</h3>
+                    <div class="price">
+                        <div class="amount">$20.00</div>
+                        <div class="cut">$25.00</div>
+                        <div class="offer">20% off</div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{%static 'image/product_img4.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>product name</h3>
+                    <div class="price">
+                        <div class="amount">$20.00</div>
+                        <div class="cut">$25.00</div>
+                        <div class="offer">20% off</div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{%static 'image/product_img5.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>product name</h3>
+                    <div class="price">
+                        <div class="amount">$20.00</div>
+                        <div class="cut">$25.00</div>
+                        <div class="offer">20% off</div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{%static 'image/product_img6.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>product name</h3>
+                    <div class="price">
+                        <div class="amount">$20.00</div>
+                        <div class="cut">$25.00</div>
+                        <div class="offer">20% off</div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <!--header-col2-->
-        <div class="clear"></div>
-        <!--clear-->
-        <img class="hedaer-bg-par-img" src="{% static 'images/corner-img.png'%}" class="img-responsive" alt="corner" />
-    </section>
-    <!--header-bg-parent-->
 
-    <section id="feature-sec">
-        <div class="text-center">
-            <h5 class="common-h5">CARE FEATURES</h5>
-            <h2 class="common-h2">Provide Awesome Service With Our Tools</h2>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<!-- featured section ends -->
+
+<!-- reviews section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading"> client's <span>review</span> </h1>
+
+    <div class="swiper review-slide">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <div class="user">
+                    <img src="{%static 'image/pic-1.png'%}" alt="">
+                    
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>happy client</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <div class="user">
+                    <img src="{%static 'image/pic-2.png'%}" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>happy client</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <div class="user">
+                    <img src="{%static 'image/pic-3.png'%}" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>happy client</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <div class="user">
+                    <img src="{%static 'image/pic-4.png'%}" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>happy client</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <div class="user">
+                    <img src="{%static 'image/pic-5.png'%}" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>happy client</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <div class="user">
+                    <img src="{%static 'image/pic-6.png'%}" alt="">
+                    <div class="info">
+                        <h3>john deo</h3>
+                        <span>happy client</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <!--text-center-->
-        <section class="faeture-col-par">
-            <div class="container">
-                <div class="feature-col">
-                    <h3>Discover, Explore the Product</h3>
-                    <img src="{% static 'images/home-faeture-img/service_img1.png'%}" class="img-responsive" alt="service" />
-                    <h4>Discover, Explore &amp; understanding the product</h4>
-                    <!--                </div>feature-col-->
-                </div>
-                <!--feature-col-->
-                <div class="feature-col">
-                    <h3>Discover, Explore the Product</h3>
-                    <img src="{% static 'images/home-faeture-img/service_img2.png'%}" class="img-responsive" alt="service" />
-                    <h4>Discover, Explore &amp; understanding the product</h4>
-                    <!--                </div>feature-col-->
-                </div>
-                <!--feature-col-->
-                <div class="feature-col">
-                    <h3>Discover, Explore the Product</h3>
-                    <img src="{% static 'images/home-faeture-img/service_img3.png'%}" class="img-responsive" alt="service" />
-                    <h4>Discover, Explore &amp; understanding the product</h4>
-                    <!--                </div>feature-col-->
-                </div>
-                <!--feature-col-->
-                <div class="feature-col">
-                    <h3>Discover, Explore the Product</h3>
-                    <img src="{% static 'images/home-faeture-img/service_img4.png'%}" class="img-responsive" alt="service" />
-                    <h4>Discover, Explore &amp; understanding the product</h4>
-                    <!--                </div>feature-col-->
-                </div>
-                <!--feature-col-->
-                <div class="clear"></div>
-            </div>
-        </section>
 
-        <section id="why-choose-us">
-            <div class="container">
-                <div class="why-choose-col">
-                    <h5 class="common-h5">WHY CHOOSE US</h5>
-                    <h2 class="common-h2">Boosts Your Website Traffic!</h2>
-                    <p>We are passionate about our work. Our designers stay ahead of the curve to provide engaging and user-friendly website designs to make your business stand out. Our developers are committed to maintaining the highest web standards so that your site will withstand the test of time. We care about your business, which is why we work with you.</p>
-                    <button class="common-btn" type="button">DISCOVER MORE</button>
-                </div>
-                <div class="count-col">
-                    <div class="stat">
-                        <div class="count-sub-col">
-                            <div class="milestone-counter">
-                                <span class="stat-count highlight">122</span>
-                                <div class="milestone-details">Happy Customers</div>
-                            </div>
-                            <!--milestone-counter-->
-                        </div>
-                        <!--count-sub-col-->
-                        <div class="count-sub-col">
-                            <div class="milestone-counter">
-                                <span class="stat-count highlight">100</span>
-                                <div class="milestone-details">Ordered Coffee's</div>
-                            </div>
-                            <!--milestone-counter-->
-                        </div>
-                        <!--count-sub-col-->
-                        <div class="count-sub-col">
-                            <div class="milestone-counter">
-                                <span class="stat-count highlight">140</span>
-                                <div class="milestone-details">Awards Win</div>
-                            </div>
-                            <!--milestone-counter-->
-                        </div>
-                        <!--count-sub-col-->
-                    </div>
-                    <!--stat-->
-                    <div class="stat-info-par">
-                        <div class="stat-info-sub-par">
-                            <div class="stat-info-div">
-                                <p>Men and women, committed to better protect you around the world.</p>
-                            </div>
-                            <!--stat-info-div-->
-                        </div>
-                        <!--stat-info-sub-par-->
-                        <div class="stat-info-sub-par">
-                            <div class="stat-info-div">
-                                <p>Men and women, committed to better protect you around the world.</p>
-                            </div>
-                            <!--stat-info-div-->
-                        </div>
-                        <!--stat-info-sub-par-->
-                        <div class="stat-info-sub-par">
-                            <div class="stat-info-div">
-                                <p>Men and women, committed to better protect you around the world.</p>
-                            </div>
-                            <!--stat-info-div-->
-                        </div>
-                        <!--stat-info-sub-par-->
-                    </div>
-                    <!--stat-info-par-->
-                </div>
-                <!--count-col-->
-                <div class="clear"></div>
-            </div>
-            <!--container-->
-        </section>
+    </div>
 
-        <section id="expand">
-            <div class="text-center">
-                <h5 class="common-h5">EXPERINCE</h5>
-                <h2 class="common-h2">Pay for Qualified Traffic</h2>
+</section>
+
+<!-- reviews section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span> us </h1>
+
+    <div class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>address</h3>
+            <p>jogeshwari, mumbai, india - 400104</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>email</h3>
+            <p>shaikhanas@gmail.com</p>
+            <p>anasbhai@gmail.com</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>phone</h3>
+            <p>+123-456-7890</p>
+            <p>+111-222-3333</p>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <form action="">
+            <h3>get in touch</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="your name">
+                <input type="email" placeholder="your email">
             </div>
-            <!--text-center-->
-            <div class="expand-img-col">
-                <div class="expand-img">
-                    <img src="{% static 'images/expand-home-img.png'%}" alt="expand" class="img-responsive" />
-                    <div class="expand-img-info">
-                        <i class="fa fa-mobile-phone"></i>
-                        <h2>Expand Your <br>Digital Presence</h2>
-                        <p>Your app is your tool for better communicatio with your followers.</p>
-                        <a href="#">Get In Touch <i class="fa fa-long-arrow-right"></i></a>
+            <div class="inputBox">
+                <input type="number" placeholder="your number">
+                <input type="text" placeholder="your subject">
+            </div>
+            <textarea placeholder="your message" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" class="btn">
+        </form>
+
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1633431163028!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- blogs  section starts  -->
+
+<section class="blogs" id="blogs">
+    
+    <h1 class="heading"> our <span>blogs</span></h1>
+
+    <div class="swiper blogs-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="{%static 'image/blog-1.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</p>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2021 </a>
+                        <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
                 </div>
             </div>
-            <!--expand-img-col-->
-            <div class="expand-img-info-col">
-                <div class="progress-bar-col">
-                    <div class="col-sm-4">
-                        <div class="progressbar">
-                            <div class="second circle" data-percent="77">
-                                <strong></strong>
 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="progressbar">
-                            <div class="second circle" data-percent="55">
-                                <strong></strong>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="progressbar">
-                            <div class="second circle" data-percent="100">
-                                <strong></strong>
-
-                            </div>
-                        </div>
-                    </div>
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="{%static 'image/blog-2.jpg'%}" alt="">
                 </div>
-                <!--progress-bar-col-->
-                <div class="progress-info-col">
-                    <div class="progress-info">
-                        <h3>Creative Approach</h3>
-                        <p>Ea pro tibique comprehensam, sed ea verear numquam molestie. Nam te omittam comprehensam.</p>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</p>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2021 </a>
+                        <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
-                    <!--progress-info-->
-                    <div class="progress-info">
-                        <h3>Creative Approach</h3>
-                        <p>Ea pro tibique comprehensam, sed ea verear numquam molestie. Nam te omittam comprehensam.</p>
-                    </div>
-                    <!--progress-info-->
-                    <div class="progress-info">
-                        <h3>Creative Approach</h3>
-                        <p>Ea pro tibique comprehensam, sed ea verear numquam molestie. Nam te omittam comprehensam.</p>
-                    </div>
-                    <!--progress-info-->
-                </div>
-                <!--progress-info-col-->
-            </div>
-            <!--expand-img-info-col-->
-            <div class="clear"></div>
-            <!--clear-->
-        </section>
-
-        <Section id="faq-par">
-            <div class="container">
-                <div class="faq-que-col">
-                    <h5 class="common-h5">EXPERINCE</h5>
-                    <h2 class="common-h2">Pay for Qualified Traffic</h2>
-                    <div id="faq-accordion">
-
-
-                        <h3>Why do we use it ?</h3>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-
-                        <h3>Who we use it ?</h3>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-
-                        <h3>can we use it ?</h3>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-
-                        <h3>What Three Solutions are ?</h3>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-
-                        <h3>Do or Not ?</h3>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-
-                    </div>
-                </div>
-                <!--faq-que-col-->
-                <div class="faq-bg-col">
-                    <div class="faq-img-par">
-                        <img src="{% static 'images/home-faq.png'%}" alt="faq" class="img-responsive" />
-                        <div class="faq-img-info">
-                            <i class="fa fa-lightbulb-o"></i>
-                            <h2>Have a project in mind? <br>Let’s get to work.</h2>
-                            <p>Find out how it works and ask any <br> questions you may have.</p>
-                            <a href="#">Get In Touch <i class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                        <!--faq-img-info-->
-                    </div>
-                    <!--faq-img-par-->
-                </div>
-                <!--faq-bg-col-->
-                <div class="clear"></div>
-            </div>
-            <!--container-->
-        </Section>
-
-        <Section id="project">
-            <div class="text-center">
-                <h5 class="common-h5">FEATURED PROJECTS</h5>
-                <h2 class="common-h2">Our Case Studies</h2>
-            </div>
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <div class="owl-img-par">
-                        <img src="{% static 'images/portfolio/portfolio-one.jpg'%}" class="img-responsive" />
-                        <div class="owl-img-info">
-                            <h3>SEO</h3>
-                            <p>Marketing</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="owl-img-par">
-                        <img src="{% static 'images/portfolio/portfolio-two.jpg'%}" class="img-responsive" />
-                        <div class="owl-img-info">
-                            <h3>SEO</h3>
-                            <p>Marketing</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="owl-img-par">
-                        <img src="{% static 'images/portfolio/portfolio-three.jpg'%}" class="img-responsive" />
-                        <div class="owl-img-info">
-                            <h3>SEO</h3>
-                            <p>Marketing</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="owl-img-par">
-                        <img src="{% static 'images/portfolio/portfolio-four.jpg'%}" class="img-responsive" />
-                        <div class="owl-img-info">
-                            <h3>SEO</h3>
-                            <p>Marketing</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="owl-img-par">
-                        <img src="{% static 'images/portfolio/portfolio-one.jpg'%}" class="img-responsive" />
-                        <div class="owl-img-info">
-                            <h3>SEO</h3>
-                            <p>Marketing</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="owl-img-par">
-                        <img src="{% static 'images/portfolio/portfolio-two.jpg'%}" class="img-responsive" />
-                        <div class="owl-img-info">
-                            <h3>SEO</h3>
-                            <p>Marketing</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </Section>
-
-        <section id="price-table">
-            <div class="text-center">
-                <h5 class="common-h5">PRICING PLAN</h5>
-                <h2 class="common-h2">The Best Solutions for Our Clients</h2>
-            </div>
-            <div class="basic-price-col">
-                <div class="basic-price-info">
-                    <h4>Basic Plan</h4>
-                    <div class="price">
-                        <p>$2450</p>
-                    </div>
-                    <!--price-->
-                    <div class="price-list">
-                        <ul>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                        </ul>
-                    </div>
-                    <!--price-list-->
-                    <button type="button" class="price-btn">Get Started</button>
-                </div>
-                <!--basic-price-info-->
-            </div>
-            <!--basic-price-col-->
-            <div class="basic-price-col rec-price">
-                <div class="basic-price-info">
-                    <h4>Standart Plan</h4>
-                    <div class="price">
-                        <p>$2450</p>
-                    </div>
-                    <!--price-->
-                    <div class="price-list">
-                        <ul>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                        </ul>
-                    </div>
-                    <!--price-list-->
-                    <button type="button" class="price-btn">Get Started</button>
-                </div>
-                <!--basic-price-info-->
-            </div>
-            <!--basic-price-col-->
-            <div class="basic-price-col">
-                <div class="basic-price-info">
-                    <h4>Premium Plan</h4>
-                    <div class="price">
-                        <p>$2450</p>
-                    </div>
-                    <!--price-->
-                    <div class="price-list">
-                        <ul>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                            <li>SEO Audits</li>
-                        </ul>
-                    </div>
-                    <!--price-list-->
-                    <button type="button" class="price-btn">Get Started</button>
-                </div>
-                <!--basic-price-info-->
-            </div>
-            <!--basic-price-col-->
-            <div class="clear"></div>
-        </section>
-
-        <section id="blog">
-            <div class="text-center">
-                <h5 class="common-h5">BLOG</h5>
-                <h2 class="common-h2">Read Our Lates News</h2>
-            </div>
-            <div class="container">
-                <div class="blog-col">
-                    <img src="{% static 'images/blog/blog-1.jpg'%}" alt="blog1" class="img-responsive" />
-                    <span>May 16 2020</span>
-                    <h3>How to Increase Your ROI Through scientific SEM?</h3>
-                    <a href="#">Read More</a>
-                </div>
-                <!--blog-col-->
-                <div class="blog-col">
-                    <img src="{% static 'images/blog/blog-2.jpg'%}" alt="blog1" class="img-responsive" />
-                    <span>May 16 2020</span>
-                    <h3>How to Increase Your ROI Through scientific SEM?</h3>
-                    <a href="#">Read More</a>
-                </div>
-                <!--blog-col-->
-                <div class="blog-col">
-                    <img src="{% static 'images/blog/blog-3.jpg'%}" alt="blog1" class="img-responsive" />
-                    <span>May 16 2020</span>
-                    <h3>How to Increase Your ROI Through scientific SEM?</h3>
-                    <a href="#">Read More</a>
-                </div>
-                <!--blog-col-->
-                <div class="clear"></div>
-            </div>
-            <!--container-->
-        </section>
-
-        <Section id="contact">
-            <div class="container">
-                <div class="form-par">
-                    <h2>Get IN Touch With US !</h2>
-                    <form>
-                        <input type="text" placeholder="Your Name" class="f-name form-com" />
-                        <input type="email" placeholder="Email" class="em-input form-com" />
-                        <input type="tel" id="phone" name="phone" class="phone-input form-com" placeholder="Mobile No" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
-                        <input type="text" placeholder="Website" class="web-input form-com" />
-                        <input type="submit" value="submit" class="submit-btn" />
-                    </form>
                 </div>
             </div>
-            <!--container-->
-        </Section>
-        <!--contact-->
 
-        <footer>
-            <div class="container">
-                <div class="footer-col">
-                    <h3>About Us</h3>
-                    <p>We focus on the needs of small to middle market businesses to improve and grow their return.so that your site will withstand the test of time. We care about your business, which is why we work with you.</p>
-                    <div class="social-icons-footer">
-                        <i class="fa fa-facebook-square"></i>
-                        <i class="fa fa-twitter-square"></i>
-                        <i class="fa fa-instagram"></i>
-                        <i class="fa fa-youtube-square"></i>
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="{%static 'image/blog-3.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</p>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2021 </a>
+                        <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
                 </div>
-                <!--footer-col-->
-                <div class="footer-col footer-2-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li>Home</li>
-                        <li>About Us</li>
-                        <li>Services</li>
-                        <li>Portfolio</li>
-                        <li>Blog</li>
-                        <li>Contact Us</li>
-                    </ul>
-                </div>
-                <!--footer-col-->
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <p><i class="fa fa-envelope-o"></i> <a href="mailto:demo@gmail.com">demo@gmail.com</a></p>
-                    <p><i class="fa fa-mobile-phone"></i> <a href="tel:9855000000">9855000000</a></p>
-                    <p><i class="fa fa-map-o"></i> <span>27 Division St, New York, NY 10002, US</span></p>
-                </div>
-                <!--footer-col-->
-                <div class="clear"></div>
-                <hr class="footer-hr">
-                <p class="copyright-footer">&copy; 2020 — Websblog. All Rights Reserved.</p>
             </div>
-        </footer>
 
-        <script type="text/javascript" src="{%static 'js/jquery-3.2.1.min.js'%}"></script>
-        <Script src="{%static 'js/jquery-ui.min.js'%}"></Script>
-        <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
-        <script type="text/javascript" src="{%static 'js/owl.carousel.min.js'%}"></script>
-        <Script src="{%static 'js/extrenaljq.js'%}" type="text/javascript"></Script>
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="{%static 'image/blog-4.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</p>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2021 </a>
+                        <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="{%static 'image/blog-5.jpg'%}" alt="">
+                </div>
+                <div class="content">
+                    <h3>blog title goes here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</p>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2021 </a>
+                        <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<!-- blogs  section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, nesciunt!</p>
+        </div>
+
+        <div class="box">
+            <h3>category</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> men </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> women </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> kids </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> best seller </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> new arrivals </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> products </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> review </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> my order </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> my account </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> my listing </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> sell now </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> new offers </a>
+        </div>
+
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-instagram"></a>
+    </div>
+
+    <div class="credit"> &copy; copyright @ 2023 by <span>mr. Shubham singh</span> </div>
+    
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link -->
+<script src="{%static 'js/script.js'%}"></script>
+
 </body>
-<script>
-    $(document).ready(function() {
-        $("#toggle-bar").click(function() {
-            $(".menu").slideToggle(400);
-        });
-    });
-
-</script>
-
-
 </html>

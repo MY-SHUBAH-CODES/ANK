@@ -13,8 +13,11 @@ def home(request):
 # def services(request):
 #     return render(request,"services.html")
 
-# def products(request):
-#     return render(request,"product2.html")
+def products(request):
+    return render(request,"products.html")
+
+def featuredproducts(request):
+    return render(request,"featuredproducts.html")
 
 
 
