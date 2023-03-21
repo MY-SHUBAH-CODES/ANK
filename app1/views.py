@@ -13,24 +13,25 @@ def home(request):
 # def services(request):
 #     return render(request,"services.html")
 
-def products(request):
-    return render(request,"products.html")
-
-def featuredproducts(request):
-    return render(request,"featuredproducts.html")
 
 
 
 
 
 
-# def general_contact(request):
-#     if request.method=='POST':
-#         name=request.POST['Name']
-#         email=request.POST['Email']
-#         message=request.POST['Message']
-#         dat=General_contact.objects.create(name=name,email=email,message=message)
-#     return render(request,'index.html')
+
+def general_inquery(request):
+    if request.method=='POST':
+        name=request.POST['Name']
+        email=request.POST['Email']
+        number=request.POST['Number']
+        subject=request.POST['Subject']
+        message=request.POST['Message']
+        dat=General_contact.objects.create(name=name,email=email,number=number,subject=subject,message=message)
+    return render(request,'index.html')
+
+# def blog(request):
+#     return render(request,'blog.html')
 
 
 
