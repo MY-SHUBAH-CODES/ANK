@@ -20,7 +20,7 @@ def search(request):
     if request.method=='POST':
         searchkey=request.POST['searchkey']
         print(searchkey)
-    return redirect(request,'.')
+    return redirect(request,'#')
 
 
 

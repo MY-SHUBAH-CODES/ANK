@@ -7,7 +7,7 @@ urlpatterns = [
     path('general_inquery/',views.general_inquery,name="general_inquery"),
     
     # path('search/',views.search,name="search"),
-    path('search/',views.search,name="search"),
+    # path('#/',views.search,name="search"),
 
     
     
